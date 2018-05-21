@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        {% block head %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+            <title>{% block title %}{% endblock %} - My Webpage</title>
+            <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+        <div id="content">{% block content %}{% endblock %}</div>
+        <div id="footer">
+            {% block footer %}
+                &copy; Copyright 2018 by Dzmitry Fashchanka.
+            {% endblock %}
+        </div>
+    </body>
+</html>
